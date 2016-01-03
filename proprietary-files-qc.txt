@@ -1,0 +1,147 @@
+# Audio ACDB
+system/etc/sound_param/g620s_l01l02/Speaker_cal.acdb
+system/etc/sound_param/g620s_l01l02/Headset_cal.acdb
+system/etc/sound_param/g620s_l01l02/Hdmi_cal.acdb
+system/etc/sound_param/g620s_l01l02/Handset_cal.acdb
+system/etc/sound_param/g620s_l01l02/Global_cal.acdb
+system/etc/sound_param/g620s_l01l02/General_cal.acdb
+system/etc/sound_param/g620s_l01l02/Bluetooth_cal.acdb
+
+# Audio
+system/vendor/lib/libacdbloader.so
+system/vendor/lib/libaudcal.so
+system/vendor/lib/libacdbrtac.so
+system/vendor/lib/libadiertac.so
+
+# Battery daemon (recovery)
+recovery/root/sbin/vm_bms
+
+# Battery daemon
+system/bin/vm_bms
+
+# Bluetooth
+system/bin/btnvtool
+system/bin/hci_qcomm_init
+system/vendor/lib/libbtnv.so
+
+# Huawei extra
+system/bin/rmt_oeminfo
+system/bin/test_diag
+system/lib/liboeminfo.so
+
+# Graphics
+system/vendor/lib/egl/eglsubAndroid.so
+system/vendor/lib/egl/libEGL_adreno.so
+system/vendor/lib/egl/libGLESv1_CM_adreno.so
+system/vendor/lib/egl/libGLESv2_adreno.so
+system/vendor/lib/egl/libq3dtools_adreno.so
+system/vendor/lib/egl/libQTapGLES.so
+system/vendor/lib/egl/libRBEGL_adreno.so
+system/vendor/lib/egl/libRBGLESv1_CM_adreno.so
+system/vendor/lib/egl/libRBGLESv2_adreno.so
+system/vendor/lib/libadreno_utils.so
+system/vendor/lib/libc2d30.so
+system/vendor/lib/libc2d30-a3xx.so
+system/vendor/lib/libC2D2.so
+system/vendor/lib/libCB.so
+system/vendor/lib/libgsl.so
+system/vendor/lib/libllvm-glnext.so
+system/vendor/lib/libllvm-qcom.so
+system/vendor/lib/libOpenCL.so
+system/vendor/lib/librs_adreno.so
+system/vendor/lib/librs_adreno_sha1.so
+system/vendor/lib/libRSDriver_adreno.so
+system/vendor/lib/libsc-a2xx.so
+system/vendor/lib/libsc-a3xx.so
+system/vendor/lib/libscale.so
+
+# Graphics firmware
+system/etc/firmware/a300_pfp.fw
+system/etc/firmware/a300_pm4.fw
+
+# Media libraries
+system/vendor/lib/libFileMux.so
+system/vendor/lib/libHevcSwDecoder.so
+system/vendor/lib/libmmosal.so
+system/vendor/lib/libOmxAacDec.so
+system/vendor/lib/libOmxEvrcDec.so
+system/vendor/lib/libOmxMux.so
+system/vendor/lib/libOmxQcelp13Dec.so
+system/vendor/lib/libwfdcommonutils.so
+
+# Media firmware
+system/etc/firmware/venus.b00
+system/etc/firmware/venus.b01
+system/etc/firmware/venus.b02
+system/etc/firmware/venus.b03
+system/etc/firmware/venus.b04
+system/etc/firmware/venus.mbn
+system/etc/firmware/venus.mdt
+
+# Qualcomm framework
+system/bin/irsc_util
+system/etc/data/dsi_config.xml
+system/etc/data/netmgr_config.xml
+system/etc/data/qmi_config.xml
+system/vendor/lib/libdiag.so
+system/vendor/lib/libdsi_netctrl.so
+system/vendor/lib/libdsutils.so
+system/vendor/lib/libidl.so
+system/vendor/lib/libqcci_legacy.so
+system/vendor/lib/libqdi.so
+system/vendor/lib/libqdp.so
+system/vendor/lib/libqmi.so
+system/vendor/lib/libqmi_cci.so
+system/vendor/lib/libqmi_client_helper.so
+system/vendor/lib/libqmi_client_qmux.so
+system/vendor/lib/libqmi_common_so.so
+system/vendor/lib/libqmi_csi.so
+system/vendor/lib/libqmi_encdec.so
+system/vendor/lib/libqmiservices.so
+system/vendor/lib/libsmemlog.so
+
+# Radio
+system/bin/netmgrd
+system/bin/qmuxd
+system/bin/radish
+system/bin/rfs_access
+system/bin/rmt_storage
+system/vendor/lib/libcneapiclient.so
+system/vendor/lib/libconfigdb.so
+system/vendor/lib/libmdmdetect.so
+system/vendor/lib/libnetmgr.so
+system/vendor/lib/libperipheral_client.so
+system/vendor/lib/libril-qc-qmi-1.so
+system/vendor/lib/libril-qcril-hook-oem.so
+system/vendor/lib/libsystem_health_mon.so
+system/vendor/lib/libxml.so
+
+# Time services
+-system/app/TimeService/TimeService.apk
+system/bin/time_daemon
+-system/vendor/lib/libtime_genoff.so
+system/vendor/lib/libTimeService.so
+
+# Thermal engine
+system/etc/thermal-engine.conf
+system/vendor/bin/thermal-engine
+system/vendor/lib/libthermalclient.so
+system/vendor/lib/libthermalioctl.so
+
+# Perf
+system/vendor/bin/perfd
+system/vendor/lib/libqti-perfd-client.so
+
+# GPS
+# --add blobs here
+
+# DRM
+# --add blobs here
+
+# Camera
+# --add blobs here
+
+# NFC
+# --add blobs here
+
+# other blobs should be added here to enable future functionality !
