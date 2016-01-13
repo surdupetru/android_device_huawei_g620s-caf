@@ -142,6 +142,7 @@ system/vendor/lib/libqti-perfd-client.so
 # --add blobs here
 
 # NFC
-# --add blobs here
+system/vendor/firmware/libpn547_fw.so
+
 
 # other blobs should be added here to enable future functionality !

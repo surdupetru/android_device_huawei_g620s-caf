@@ -117,6 +117,10 @@ TARGET_NO_RPC := true
 # Liblight
 TARGET_PROVIDES_LIBLIGHT := true
 
+# NFC
+BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_DEVICE := "/dev/nfc-nci"
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
