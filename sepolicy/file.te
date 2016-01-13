@@ -1,0 +1,4 @@
+type tap2wake_dev, fs_type, sysfs_type;
+type modem_block_device, dev_type;
+type vibeamp_sysfs, sysfs_type, file_type;
+

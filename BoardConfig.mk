@@ -46,6 +46,9 @@ AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 COMMON_GLOBAL_CFLAGS += -DHUAWEI_SOUND_PARAM_PATH=\"/system/etc/sound_param/g620s_l01l02\"
 
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
@@ -67,6 +70,7 @@ USE_OPENGL_RENDERER := true
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_g620s.cpp
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
@@ -106,6 +110,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 
 # RIL
 TARGET_RIL_VARIANT := caf
+PROTOBUF_SUPPORTED := true
 
 # FM
 AUDIO_FEATURE_ENABLED_FM := true
@@ -118,12 +123,59 @@ USE_DEVICE_SPECIFIC_GPS := true
 # Liblight
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Enables CSVT
+TARGET_USES_CSVT := true
+
+# Enable suspend during charger mode
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+
+# Offmode Charging
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(LOCAL_PATH)/charger/images
+
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
+# Secure services
+BOARD_USES_SECURE_SERVICES := true
+
+# Enable keymaster app checking
+TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+
+#Reduce space taken by the journal
+BOARD_SYSTEMIMAGE_JOURNAL_SIZE := 0
+
+# Time services
+BOARD_USES_QC_TIME_SERVICES := true
+
+# CMHW
+BOARD_USES_CYANOGEN_HARDWARE := true
+BOARD_HARDWARE_CLASS := \
+    device/huawei/g620s/cmhw \
+    hardware/cyanogen/cmhw
+
+#Enable HW based full disk encryption
+TARGET_HW_DISK_ENCRYPTION := true
+
+#Enable SW based full disk encryption
+TARGET_SWV8_DISK_ENCRYPTION := true
+
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+
+MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
+
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
 # NFC
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_DEVICE := "/dev/nfc-nci"
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    $(LOCAL_PATH)/sepolicy
 
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 

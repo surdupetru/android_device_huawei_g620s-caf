@@ -1,0 +1,1 @@
+allow vm_bms log_device:chr_file { write open };

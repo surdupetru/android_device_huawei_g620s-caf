@@ -1,0 +1,4 @@
+allow netmgrd proc_net:file r_file_perms;
+allow netmgrd proc_net:dir r_dir_perms;
+
+allow netmgrd log_device:chr_file { write open };

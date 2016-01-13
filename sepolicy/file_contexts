@@ -1,0 +1,24 @@
+/sys/touch_screen/easy_wakeup_gesture	u:object_r:tap2wake_dev:s0
+/sys/touch_screen/glove_func/signal_disparity	u:object_r:tap2wake_dev:s0
+/sys/devices/virtual/timed_output/vibrator/vtg_level   u:object_r:vibeamp_sysfs:s0
+
+/persist/.genmac                                u:object_r:wifi_data_file:s0
+/persist/.bt_nv.bin                             u:object_r:bluetooth_data_file:s0
+
+/system/bin/init\.qcom\.bt\.sh                  u:object_r:bluetooth_loader_exec:s0
+
+/dev/smd3                                       u:object_r:hci_attach_dev:s0
+/dev/akm09911                                   u:object_r:sensors_device:s0
+/dev/akm09911_dev                               u:object_r:sensors_device:s0
+/dev/mmc3416x                                   u:object_r:sensors_device:s0
+
+# Camera
+/data/cam_socket1                               u:object_r:camera_socket:s0
+/data/cam_socket2                               u:object_r:camera_socket:s0
+
+/dev/block/platform/msm_sdcc.1/by-name/persist        u:object_r:persist_block_device:s0
+/dev/block/platform/msm_sdcc.1/by-name/system         u:object_r:system_block_device:s0
+/dev/block/platform/msm_sdcc.1/by-name/modem          u:object_r:modem_block_device:s0
+
+/dev/pn547                  u:object_r:nfc_device:s0
+

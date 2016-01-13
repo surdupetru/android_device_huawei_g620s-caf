@@ -1,0 +1,1 @@
+allow logd log_device:chr_file { write open };

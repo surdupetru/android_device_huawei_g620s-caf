@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
 
 # Feature definition files for msm8916
 PRODUCT_COPY_FILES += \
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -186,8 +187,42 @@ PRODUCT_PACKAGES += \
 
 # keep compatibility
 PRODUCT_PACKAGES += \
-    libbson \
-    libstlport
+    libbson
+
+# CRDA
+PRODUCT_PACKAGES += \
+    crda \
+    linville.key.pub.pem \
+    regdbdump \
+    regulatory.bin
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/init.crda.sh:system/etc/init.crda.sh
+
+# ANT+ stack
+PRODUCT_PACKAGES += \
+    AntHalService \
+    libantradio \
+    antradio_app \
+    com.dsi.ant.antradio_library
+
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+
+# IPv6
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes
+
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8916
+
+# HW disk encryption
+PRODUCT_PACKAGES += \
+    libcryptfs_hw
 
 # NFC
 PRODUCT_PACKAGES += \

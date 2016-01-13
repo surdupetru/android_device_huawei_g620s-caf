@@ -1,0 +1,3 @@
+allow vold firmware_file:dir { read ioctl open };
+allow vold log_device:chr_file { write open };
+allow vold persist_data_file:dir { open read write ioctl getattr };

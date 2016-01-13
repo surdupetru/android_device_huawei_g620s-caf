@@ -1,0 +1,7 @@
+binder_call(thermal-engine, servicemanager)
+binder_use(thermal-engine)
+
+allow thermal-engine self:capability chown;
+allow thermal-engine socket_device:sock_file { create setattr };
+
+allow thermal-engine log_device:chr_file { write open };

@@ -1,0 +1,1 @@
+allow dex2oat log_device:chr_file { write open };
