@@ -36,7 +36,6 @@ debug.mdpcomp.idletime=600
 persist.hwc.mdpcomp.enable=true
 persist.hwc.ptor.enable=true
 debug.enable.sglscale=0
-ro.sf.lcd_density=320
 ro.qualcomm.cabl=0
 
 # Media

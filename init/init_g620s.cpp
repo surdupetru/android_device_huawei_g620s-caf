@@ -56,34 +56,16 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         if (strstr(model, "huawei_fac_product_name") != NULL)
             break;
 
-    /* C8817D */
-    if (strstr(model, "C8817D") != NULL) {
-        property_set("ro.product.model", "C8817D");
-        property_set("ro.product.name", "C8817D");
-        property_set("ro.product.device", "C8817D");
-        property_set("ro.build.product", "C8817D");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.dsds.enabled", "true");
-        property_set("ro.telephony.default_network", "22");
-        property_set("telephony.lteOnCdmaDevice", "1");
-        property_set("ro.config.is_cdma_phone", "true");
-        property_set("ro.cdma.home.operator.numeric", "46003");
-        property_set("ro.config.cdma.globalMode", "true");
-        property_set("ro.config.dsds_mode", "cdma_gsm");
-        property_set("ro.com.android.dataroaming","true");
-        property_set("ro.ril.multi_rat_capable","true");
-        property_set("ro.build.description", "C8817D-user 4.4.4 GRJ90 C92B381 release-keys");
-        property_set("ro.build.fingerprint", "Huawei/C8817D/hwC8817D:4.4.4/HuaweiC8817D/C92B381:user/release-keys");
-    }
-    /* C8817E */
-    else if (strstr(model, "C8817E") != NULL) {
-        property_set("ro.product.model", "HUAWEI C8817E");
-        property_set("ro.product.name", "C8817E");
-        property_set("ro.product.device", "C8817E");
-        property_set("ro.build.product", "C8817E");
-        property_set("ro.telephony.default_network", "22");
-        property_set("ro.build.description", "C8817E-user 4.4.4 GRJ90 C92B380 release-keys");
-        property_set("ro.build.fingerprint", "Huawei/C8817E/hwC8817E:4.4.4/HuaweiC8817E/C92B380:user/release-keys");
+    /* G620S-L01 */
+    if (strstr(model, "G620S-L01") != NULL) {
+        property_set("ro.product.model", "G620S-L01");
+        property_set("ro.product.name", "G620S-L01");
+        property_set("ro.product.device", "G620S-L01");
+        property_set("ro.build.product", "G620S-L01");
+        property_set("ro.telephony.default_network", "9");
+        property_set("ro.sf.lcd_density","320");
+        property_set("ro.build.description", "G620S-L01-user 4.4.4 GRJ90 C00B380 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/G620S-L01/hwG620S-L01:4.4.4/HuaweiG620S-L01/C00B380:user/release-keys");
     }
     /* G621-TL00 */
     else if (strstr(model, "G621-TL00") != NULL) {
@@ -96,75 +78,62 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.telephony.default_network", "22");
         property_set("ro.config.dsds_mode", "umts_gsm");
         property_set("ro.ril.multi_rat_capable","true");
+        property_set("ro.sf.lcd_density","320");
         property_set("ro.build.description", "G621-TL00-user 4.4.4 GRJ90 C01B361SP01 release-keys");
         property_set("ro.build.fingerprint", "Honor/G621-TL00/hwG621-TL00:4.4.4/HonorG621-TL00/C01B361SP01:user/release-keys");
     }
-    /* G620S-UL00 */
-    else if (strstr(model, "G620S-UL") != NULL) {
-        property_set("ro.product.model", "G620S-UL00");
-        property_set("ro.product.name", "G620S-UL00");
-        property_set("ro.product.device", "G620S-UL00");
-        property_set("ro.build.product", "G620S-UL00");
+    /* G622-CL */
+    else if (strstr(model, "G622-CL") != NULL) {
+        property_set("ro.product.model", "G622-CL");
+        property_set("ro.product.name", "G622-CL");
+        property_set("ro.product.device", "G622-CL");
+        property_set("ro.build.product", "G622-CL");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.dsds.enabled", "true");
         property_set("ro.telephony.default_network", "22");
         property_set("ro.config.dsds_mode", "umts_gsm");
         property_set("ro.ril.multi_rat_capable","true");
-        property_set("ro.build.description", "G620S-UL00-user 4.4.4 GRJ90 C17B246 release-keys");
-        property_set("ro.build.fingerprint", "Huawei/G620S-UL00/hwG620S-UL00:4.4.4/HuaweiG620S-UL00/C17B246:user/release-keys");
+        property_set("ro.sf.lcd_density","320");
     }
-    /* G620S-L01 */
-    else if (strstr(model, "G620S-L01") != NULL) {
-        property_set("ro.product.model", "G620S-L01");
-        property_set("ro.product.name", "G620S-L01");
-        property_set("ro.product.device", "G620S-L01");
-        property_set("ro.build.product", "G620S-L01");
+    /* G660S */
+    else if (strstr(model, "G660S") != NULL) {
+        property_set("ro.product.model", "G660S");
+        property_set("ro.product.name", "G660S");
+        property_set("ro.product.device", "G660S");
+        property_set("ro.build.product", "G660S");
+        property_set("persist.radio.multisim.config", "dsds");
+        property_set("persist.dsds.enabled", "true");
+        property_set("ro.telephony.default_network", "22");
+        property_set("ro.config.dsds_mode", "umts_gsm");
+        property_set("ro.ril.multi_rat_capable","true");
+        property_set("ro.sf.lcd_density","320");
+    }
+    /* G760-L01 */
+    else if (strstr(model, "G760-L01") != NULL) {
+        property_set("ro.product.model", "G760-L01");
+        property_set("ro.product.name", "G760-L01");
+        property_set("ro.product.device", "G760-L01");
+        property_set("ro.build.product", "G760-L01");
         property_set("ro.telephony.default_network", "9");
-        property_set("ro.telephony.ril.config", "simactivation");
-        property_set("ro.build.description", "G620S-L01-user 4.4.4 GRJ90 C00B380 release-keys");
-        property_set("ro.build.fingerprint", "Huawei/G620S-L01/hwG620S-L01:4.4.4/HuaweiG620S-L01/C00B380:user/release-keys");
+        property_set("ro.sf.lcd_density","320");
+        property_set("ro.build.description", "G7-L01-user 5.1.1 GRJ90 C432B331 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/G7-L01/hwG7-L01:5.1.1/HuaweiG7-L01/C432B331:user/release-keys");
     }
-    /* Che1-CL20 */
-    else if (strstr(model, "Che1-CL20") != NULL) {
-        property_set("ro.product.model", "Che1-CL20");
-        property_set("ro.product.name", "4x");
-        property_set("ro.product.device", "Che1-CL20");
-        property_set("ro.build.product", "Che1-CL20");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.dsds.enabled", "true");
-        property_set("ro.telephony.default_network", "22");
-        property_set("telephony.lteOnCdmaDevice", "1");
-        property_set("ro.cdma.home.operator.numeric", "46003");
-        property_set("ro.config.cdma.globalMode", "true");
-        property_set("ro.config.dsds_mode", "cdma_gsm");
-        property_set("ro.ril.multi_rat_capable","true");
-        property_set("ro.build.description", "Che1-CL20-user 4.4.4 GRJ90 C00B275 release-keys");
-        property_set("ro.build.fingerprint", "Honor/Che1-CL20/Che1:4.4.4/Che1-CL20/C00B275:user/ota-rel-keys,release-keys");
+    /* Y550-L01 */
+    else if (strstr(model, "Y550-L01") != NULL) {
+        property_set("ro.product.model", "Y550-L01");
+        property_set("ro.product.name", "Y550-L01");
+        property_set("ro.product.device", "Y550-L01");
+        property_set("ro.build.product", "Y550-L01");
+        property_set("ro.telephony.default_network", "9");
+        property_set("ro.sf.lcd_density","240");
     }
-    /* Che1-CL10 */
-    else if (strstr(model, "Che1-CL10") != NULL) {
-        property_set("ro.product.model", "Che1-CL10");
-        property_set("ro.product.name", "Che1-CL10");
-        property_set("ro.product.device", "Che1-CL10");
-        property_set("ro.build.product", "Che1-CL10");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.dsds.enabled", "true");
-        property_set("ro.telephony.default_network", "22");
-        property_set("telephony.lteOnCdmaDevice", "1");
-        property_set("ro.cdma.home.operator.numeric", "46003");
-        property_set("ro.config.cdma.globalMode", "true");
-        property_set("ro.config.dsds_mode", "cdma_gsm");
-        property_set("ro.com.android.dataroaming","true");
-        property_set("ro.ril.multi_rat_capable","true");
-        property_set("ro.build.description", "Che1-CL10-user 4.4.4 GRJ90 C92B275 release-keys");
-        property_set("ro.build.fingerprint", "Honor/Che1-CL10/Che1:4.4.4/Che1-CL10/C92B275:user/ota-rel-keys,release-keys");
-    }
-    /* Che1-L04 */
-    else if (strstr(model, "Che1-L04") != NULL) {
-        property_set("ro.product.model", "Che1-L04");
-        property_set("ro.product.name", "Che1-L04");
-        property_set("ro.product.device", "Che1-L04");
-        property_set("ro.build.product", "Che1-L04");
+    /* Y630-CL */
+    else if (strstr(model, "Y630-CL") != NULL) {
+        property_set("ro.product.model", "Y630-CL");
+        property_set("ro.product.name", "Y630-CL");
+        property_set("ro.product.device", "Y630-CL");
+        property_set("ro.build.product", "Y630-CL");
         property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.dsds.enabled", "true");
         property_set("ro.telephony.default_network", "22");
@@ -172,7 +141,15 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.config.dsds_mode", "umts_gsm");
         property_set("ro.com.android.dataroaming","true");
         property_set("ro.ril.multi_rat_capable","true");
-        property_set("ro.build.description", "Che1-L04-user 4.4.4 GRJ90 C900B130 release-keys");
-        property_set("ro.build.fingerprint", "Honor/Che1-L04/Che1:4.4.4/Che1-L04/C900B130:user/ota-rel-keys,release-keys");
+        property_set("ro.sf.lcd_density","240");
+    }
+    /* Y635-L01 */
+    else if (strstr(model, "Y635-L01") != NULL) {
+        property_set("ro.product.model", "Y635-L01");
+        property_set("ro.product.name", "Y635-L01");
+        property_set("ro.product.device", "Y635-L01");
+        property_set("ro.build.product", "Y635-L01");
+        property_set("ro.telephony.default_network", "9");
+        property_set("ro.sf.lcd_density","240");
     }
 }
