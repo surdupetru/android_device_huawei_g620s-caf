@@ -127,14 +127,6 @@ typedef struct {
     gps_request_utc_time request_utc_time_cb;
 } GpsExtCallbacks;
 
-/** GPS extended batch options */
-typedef struct {
-    double max_power_allocation_mW;
-    uint32_t sources_to_use;
-    uint32_t flags;
-    int64_t period_ns;
-} FlpExtBatchOptions;
-
 /** Callback to report the xtra server url to the client.
  *  The client should use this url when downloading xtra unless overwritten
  *  in the gps.conf file
@@ -302,19 +294,6 @@ typedef struct {
     uint64_t    bds_used_in_fix_mask;
 
 } GnssSvStatus;
-
-typedef struct FlpExtLocation_s {
-    size_t          size;
-    uint16_t        flags;
-    double          latitude;
-    double          longitude;
-    double          altitude;
-    float           speed;
-    float           bearing;
-    float           accuracy;
-    int64_t         timestamp;
-    uint32_t        sources_used;
-} FlpExtLocation;
 
 enum loc_sess_status {
     LOC_SESS_SUCCESS,

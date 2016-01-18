@@ -83,7 +83,7 @@ ro.disableWifiApFirmwareReload=true
 ro.hwui.text_large_cache_height=2048
 
 # Factory reset protection
-ro.frp.pst=/dev/block/bootdevice/by-name/config
+ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
 
 # perf
 ro.core_ctl_min_cpu=2

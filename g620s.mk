@@ -86,8 +86,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/init.qcom.bt.sh:system/bin/init.qcom.bt.sh \
-    $(LOCAL_PATH)/prebuilts/init.qcom.zram.sh:system/bin/init.qcom.zram.sh
+    $(LOCAL_PATH)/prebuilts/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
+    $(LOCAL_PATH)/prebuilts/init.qcom.zram.sh:system/etc/init.qcom.zram.sh
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -248,8 +248,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/quipc.conf:system/etc/quipc.conf \
-    $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf \
-    $(LOCAL_PATH)/gps/xtwifi.conf:system/etc/xtwifi.conf
+    $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf
 
 PRODUCT_PACKAGES += \
     gps.msm8916
@@ -266,13 +265,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=128m \
     dalvik.vm.heapminfree=6m \
-    dalvik.vm.heapstartsize=14m \
-    ro.sf.lcd_density=320
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.model=G620S-L01 \
-    ro.product.name=G620S-L01 \
-    ro.product.device=G620S-L01 \
-    ro.build.product=G620S-L01
+    dalvik.vm.heapstartsize=14m
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
