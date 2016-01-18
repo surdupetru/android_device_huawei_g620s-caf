@@ -58,7 +58,6 @@ persist.timed.enable=true
 
 # System props for bluetooh
 bluetooth.hfp.client=1
-ro.qualcomm.bt.hci_transport=smd
 
 # Audio
 tunnel.audio.encode=false
