@@ -189,16 +189,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbson
 
-# CRDA
-PRODUCT_PACKAGES += \
-    crda \
-    linville.key.pub.pem \
-    regdbdump \
-    regulatory.bin
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/init.crda.sh:system/etc/init.crda.sh
-
 # ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
