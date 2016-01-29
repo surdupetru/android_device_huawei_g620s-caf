@@ -24,6 +24,7 @@ persist.data.target=dpm1
 persist.radio.no_cons_man_roam=1
 persist.data.qmi.adb_logmask=0
 persist.radio.no_wait_for_card=1
+persist.radio.add_power_save=1
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.sib16_support=1
 ro.config.always_show_roaming=true
@@ -37,6 +38,17 @@ persist.hwc.mdpcomp.enable=true
 persist.hwc.ptor.enable=true
 debug.enable.sglscale=0
 ro.qualcomm.cabl=0
+
+ro.qualcomm.cabl=2
+debug.sf.hw=1
+debug.egl.hw=1
+debug.mdpcomp.logs=0
+
+#
+# system prop for opengles version
+#
+# 196608 is decimal for 0x30000 to report version 3
+ro.opengles.version=196608
 
 # Media
 mm.enable.smoothstreaming=true
