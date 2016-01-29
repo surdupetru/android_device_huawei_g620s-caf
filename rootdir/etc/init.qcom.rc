@@ -46,6 +46,8 @@ on init
     symlink /dev/pn544 /dev/pn54x
     symlink /dev/nfc-nci /dev/pn54x
 
+    write /proc/sys/vm/page-cluster 0
+
 on fs
     wait /dev/block/bootdevice
     mount_all fstab.qcom
@@ -62,7 +64,7 @@ on early-boot
     exec u:r:qti_init_shell:s0 -- /init.qcom.early_boot.sh
 
 on boot
-    insmod /system/lib/modules/adsprpc.ko
+
 # access permission for secure touch
     chmod 0660 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0020/secure_touch_enable
     chmod 0440 /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0020/secure_touch
@@ -72,8 +74,6 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0020/secure_touch
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0070/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0070/secure_touch
-
-    write /proc/sys/vm/page-cluster 0
 
     chown system system /sys/devices/12c.hw-dev-detect/dev_flag
     chown system system /sys/touch_screen/glove_func/signal_disparity
@@ -146,7 +146,6 @@ on boot
     # NFC
     mkdir /dev/socket/qmux_nfc 0770 nfc nfc
     chmod 2770 /dev/socket/qmux_nfc
-
 
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
