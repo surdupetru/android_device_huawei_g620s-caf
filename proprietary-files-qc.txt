@@ -65,12 +65,11 @@ system/etc/firmware/a300_pfp.fw
 system/etc/firmware/a300_pm4.fw
 
 # Media libraries
-system/vendor/lib/libExtendedExtractor.so
--system/vendor/lib/libHevcSwDecoder.so
+system/lib/libOmxVdecHevc.so
+system/vendor/lib/libHevcSwDecoder.so
 system/vendor/lib/libI420colorconvert.so
-system/vendor/lib/libmmosal.so
-system/vendor/lib/libmmparser.so
 system/vendor/lib/libmm-color-convertor.so
+system/vendor/lib/libmmosal.so
 system/vendor/lib/libOmxAacDec.so
 system/vendor/lib/libOmxEvrcDec.so
 system/vendor/lib/libOmxQcelp13Dec.so
@@ -135,7 +134,7 @@ system/vendor/lib/libthermalclient.so
 system/vendor/lib/libthermalioctl.so
 
 # Perf
-system/vendor/bin/perfd
+system/mpdecision
 system/vendor/lib/libqti-perfd-client.so
 
 # GPS

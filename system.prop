@@ -99,7 +99,6 @@ ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
 ro.core_ctl_min_cpu=2
 ro.core_ctl_max_cpu=4
 ro.min_freq_0=800000
-#ro.vendor.extension_library=libqti-perfd-client.so
 
 #Trim properties
 ro.sys.fw.use_trim_settings=true
@@ -115,3 +114,14 @@ ro.sys.fw.bservice_age=5000
 
 # use 3 threads max for dex2oat
 ro.sys.fw.dex2oat_thread_count=3
+
+# Camera
+camera2.portability.force_api=1
+ro.config.hw_camera_hdr=true
+ro.config.camera_target_track=true
+ro.config.hw_camera_davinci=true
+ro.config.hw_camera_mfd=true
+persist.camera.longshot.enable=true
+ro.config.camerarc=true
+persist.camera.pip.support=0
+persist.camera.hal.debug.mask=0

@@ -46,6 +46,8 @@ on init
     symlink /dev/pn544 /dev/pn54x
     symlink /dev/nfc-nci /dev/pn54x
 
+    export LD_PRELOAD libboringssl-compat.so
+
     write /proc/sys/vm/page-cluster 0
 
 on fs
@@ -415,6 +417,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
+    setenv LD_PRELOAD /vendor/lib/libqcamerasvr-c++.so
 
 #enable zram
 on property:ro.config.zram=true
@@ -433,19 +436,18 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service perfd /system/vendor/bin/perfd
-   class main
-   user root
-   group root
-   disabled
+service mpdecision /system/bin/mpdecision --avg_comp
+    class late_start
+    user root
+    group root system
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
+   group root
    socket thermal-send-client stream 0666 system system
    socket thermal-recv-client stream 0660 system system
    socket thermal-recv-passive-client stream 0666 system system
-   group root
 
 service time_daemon /system/bin/time_daemon
    class late_start

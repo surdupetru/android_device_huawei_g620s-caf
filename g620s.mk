@@ -106,6 +106,15 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvoiceprocessing
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8916 \
+    libcam \
+    libstlport \
+    libcurl \
+    libboringssl-compat \
+    Snap
+
 # dataservices
 PRODUCT_PACKAGES += \
     librmnetctl \
@@ -242,6 +251,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     gps.msm8916
+
+# KEYPAD
+PRODUCT_PACKAGES += \
+    synaptics_rmi4_i2c.kl \
+    synaptics_dsx.kl \
+    ft5x06_ts.kl \
+    gpio-keys.kl
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
