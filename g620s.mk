@@ -38,10 +38,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuh.xml:system/etc/mixer_paths_qrd_skuh.xml
 
-# Thermal-engine
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:system/etc/thermal-engine.conf
-
 # Feature definition files for msm8916
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
