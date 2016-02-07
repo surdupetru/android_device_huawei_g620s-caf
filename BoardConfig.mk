@@ -180,6 +180,18 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 # Assert
 TARGET_OTA_ASSERT_DEVICE := g620s,G620S,hwg620s,hwG620S,G620S-L01
 
+# Enable dex pre-opt to speed up initial boot
+ifeq ($(HOST_OS),linux)
+  ifeq ($(WITH_DEXPREOPT),)
+    WITH_DEXPREOPT := true
+    WITH_DEXPREOPT_PIC := true
+    ifneq ($(TARGET_BUILD_VARIANT),user)
+      # Retain classes.dex in APK's for non-user builds
+      DEX_PREOPT_DEFAULT := nostripping
+    endif
+  endif
+endif
+
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
