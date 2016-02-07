@@ -169,12 +169,6 @@ MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
-# NFC
-BOARD_NFC_CHIPSET := pn547
-BOARD_NFC_DEVICE := "/dev/nfc-nci"
-# G760
-# BOARD_NFC_DEVICE := "/dev/pn544"
-
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
