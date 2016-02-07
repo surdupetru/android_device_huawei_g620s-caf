@@ -49,6 +49,7 @@ on init
     export LD_PRELOAD libboringssl-compat.so
 
     write /proc/sys/vm/page-cluster 0
+    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on fs
     wait /dev/block/bootdevice
@@ -402,6 +403,13 @@ on post-fs-data
     mkdir /data/nfc/param 0770 nfc nfc
     setprop ro.nfc.port "I2C"
 
+    # Sensor
+    mkdir /persist/sensors 0770 system system
+
+    #Create FM dir for patchdownloader
+    mkdir /data/misc/fm 0770 system system
+    chmod 0770 /data/misc/fm
+
     # RIDL data
     mkdir /data/misc/SelfHost/ 0710 system shell
     mkdir /data/misc/SelfHost/QCLogs/ 2750 system shell
@@ -437,9 +445,10 @@ service qseecomd /system/bin/qseecomd
    group root
 
 service mpdecision /system/bin/mpdecision --avg_comp
-    class late_start
-    user root
-    group root system
+   class main
+   user root
+   group system
+   disabled
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
@@ -859,7 +868,6 @@ service atfwd /system/bin/ATFWD-daemon
     group system radio
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
     start qti-testscripts
     start config-zram
     start atfwd
@@ -1009,3 +1017,4 @@ service test_diag /system/bin/test_diag
 service rmt_oeminfo /system/bin/rmt_oeminfo
     class core
     user root
+    seclabel u:r:oeminfo:s0
