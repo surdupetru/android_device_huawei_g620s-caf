@@ -1,3 +1,2 @@
-allow vold firmware_file:dir { read ioctl open };
-allow vold log_device:chr_file { write open };
-allow vold persist_data_file:dir { open read write ioctl getattr };
+allow vold cache_file:dir create;
+allow vold persist_file:dir r_dir_perms;

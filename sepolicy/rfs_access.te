@@ -1,1 +1,0 @@
-allow rfs_access log_device:chr_file { write open };

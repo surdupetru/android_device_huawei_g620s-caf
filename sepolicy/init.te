@@ -1,16 +1,2 @@
-allow init block_device:blk_file write;
-allow init device:chr_file { create unlink };
-allow init diag_exec:file { read getattr open execute };
-allow init log_device:chr_file write;
-allow init qmuxd:unix_stream_socket connectto;
-allow init qmuxd_socket:sock_file write;
-allow init self:socket { read bind create write ioctl };
-allow init smem_log_device:chr_file { write ioctl };
-allow init system_file:dir { remove_name add_name };
-#allow init system_file:file { rename write link setattr create };
-
-# Allow init to format userdata & cache partitions
-allow init userdata_block_device:blk_file rw_file_perms;
-allow init cache_block_device:blk_file rw_file_perms;
-
-allow qti_init_shell radio_prop:property_service { set };
+allow init diag_exec:file { getattr execute read open };
+allow init diag:process { transition rlimitinh siginh };

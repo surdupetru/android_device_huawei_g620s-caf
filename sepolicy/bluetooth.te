@@ -1,1 +1,0 @@
-allow bluetooth log_device:chr_file write;

@@ -1,3 +1,0 @@
-allow rmt_storage log_device:chr_file { write open };
-
-allow rmt_storage ssd_device:blk_file rw_file_perms;

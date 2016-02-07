@@ -1,1 +1,0 @@
-allow rild log_device:chr_file { write open };

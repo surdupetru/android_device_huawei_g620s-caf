@@ -1,3 +1,0 @@
-allow radio log_device:chr_file write;
-
-allow radio baseband_prop:property_service set;

@@ -1,4 +1,1 @@
-allow mpdecision socket_device:dir { write add_name };
-allow mpdecision socket_device:sock_file { write create setattr };
-allow mpdecision system_data_file:file { open };
-allow mpdecision log_device:chr_file { write open };
+allow mpdecision proc:file rw_file_perms;
