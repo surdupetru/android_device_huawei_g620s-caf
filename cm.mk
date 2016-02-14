@@ -23,6 +23,8 @@ TARGET_SCREEN_WIDTH := 720
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+PRODUCT_GMS_CLIENTID_BASE := android-g620s
+
 PRODUCT_NAME := cm_g620s
 PRODUCT_DEVICE := g620s
 

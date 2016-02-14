@@ -106,11 +106,20 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8916 \
-    libcam \
+    mm-qcamera-app \
+    libmm-omxcore \
+    libmmjpeg_interface \
+    libqomx_core \
     libstlport \
     libcurl \
-    libboringssl-compat \
+    libhuawei_cutilz \
     Snap
+
+# Snapdragoncamera
+PRODUCT_PACKAGES += \
+    SnapdragonCamera \
+    libjni_snapcammosaic \
+    libjni_snapcamtinyplanet
 
 # dataservices
 PRODUCT_PACKAGES += \
@@ -147,8 +156,12 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
+    libOmxCore \
+    libOmxSwVencMpeg4 \
     libOmxVdec \
+    libOmxVdpp \
     libOmxVenc \
+    libOmxVidEnc \
     libstagefrighthw
 
 # mm-dash
@@ -194,10 +207,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     wcnss_service
 
-# keep compatibility
-PRODUCT_PACKAGES += \
-    libbson
-
 # ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -241,6 +250,15 @@ PRODUCT_PACKAGES += \
     ft5x06_ts.kl \
     gpio-keys.kl
 
+# Keyhandler/Gestures
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
+
+PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
+
+# never dexopt the keyhandler
+$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
+
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-swap=false \
@@ -250,9 +268,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=2 \
     dalvik.vm.image-dex2oat-threads=4
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=128m \
-    dalvik.vm.heapminfree=6m \
-    dalvik.vm.heapstartsize=14m
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)

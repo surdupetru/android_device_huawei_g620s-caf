@@ -64,6 +64,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USE_COMPAT_GRALLOC_ALIGN := true
+BOARD_USES_LEGACY_MMAP := true
+TARGET_USE_VENDOR_CAMERA_EXT := true
 
 # Graphics
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
@@ -192,6 +194,9 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+#Use dlmalloc instead of jemalloc for mallocs
+MALLOC_IMPL := dlmalloc
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
